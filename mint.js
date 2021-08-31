@@ -28,14 +28,13 @@ const init = async () => {
   const web3Inst = new web3(provider);
 
   if (contract) {
-    const token = new web3Inst.eth.Contract(abi, contract, { gasLimit: "1000000" });
-    console.log(token);
+    const token = new web3Inst.eth.Contract(abi, contract, { gasLimit: "1000000000" });
     try {
       for (let i = 0; i < 10; i++) {
         console.log("proofs " + i, proofs[i]);
         let tx = await token.methods
           .addSolution(proofs[i].proof.a, proofs[i].proof.b, proofs[i].proof.c, proofs[i].inputs, owner, i * 10)
-          .send({ from: owner, gas: 3000000 });
+          .send({ from: owner, gas: 4712388, gasPrice: 100000000000 });
         console.log("solution added", tx);
         tx = await token.methods.mintVerify(owner, i).send({ from: owner, gas: 3000000 });
         console.log("Token mint", tx);

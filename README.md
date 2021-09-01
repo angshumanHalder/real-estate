@@ -9,6 +9,7 @@ Verifier - 0x4d0d8a4846cb8bc23cc17d687c47c22f4a83a73b
 Migrations - 0x06dfca1f2cdf2c48695448c74afebcf26e08322b
 
 OpenSea marketplace -
+
 Seller - https://testnets.opensea.io/0x1c94b93a5665a55c58134c1c2eb165a2e06812b5
 Buyer - https://testnets.opensea.io/0xa1341d213f3fa2f494f6411132d9225a27e8db6f
 

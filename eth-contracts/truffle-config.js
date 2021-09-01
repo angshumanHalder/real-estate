@@ -51,6 +51,7 @@ module.exports = {
 
     rinkeby: {
       networkCheckTimeout: 1000000,
+      timeoutBlocks: 200,
       provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
       network_id: 4,
       gas: 8500000, // Ropsten has a lower block limit than mainnet
